@@ -11,7 +11,18 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 
 ### find all customers that live in London. Returns 6 records.
 
+```sqlite
+select * from Customers
+where City in ('London');
+```
+
 ### find all customers with postal code 1010. Returns 3 customers.
+
+```sqlite
+select * from Customers
+where PostalCode in (1010);
+
+```
 
 ### find the phone number for the supplier with the id 11. Should be (010) 9984510.
 
