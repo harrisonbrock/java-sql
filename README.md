@@ -132,4 +132,6 @@ Create Table budget.accounts (
    
    budget Real Not Null
    
-);```
+);
+
+```
