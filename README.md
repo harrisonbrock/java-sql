@@ -96,10 +96,7 @@ order by City;
 ```sqlite
 delete from Customers
 where CustomerID not in
-      (select c.CustomerID from Orders as o
-        join Customers C on o.CustomerID = C.CustomerID
-        group by c.CustomerID
-        );
+      (select o.CustomerID from Orders as o);
 ```
 ## Create Database and Table
 
