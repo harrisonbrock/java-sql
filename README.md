@@ -34,7 +34,18 @@ where SupplierID = 11;
 
 ### list orders descending by the order date. The order with date 1997-02-12 should be at the top.
 
+```sqlite
+select * from Orders
+order by OrderDate asc ;
+
+```
+
 ### find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.
+
+```sqlite
+select * from Suppliers
+where length(CompanyName) > 20;
+```
 
 ### find all customers that include the word "market" in the name. Should return 4 records.
 
