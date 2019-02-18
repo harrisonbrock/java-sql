@@ -49,9 +49,25 @@ where length(CompanyName) > 20;
 
 ### find all customers that include the word "market" in the name. Should return 4 records.
 
+```sqlite
+select * from Customers
+where CompanyName like '%market%';
+```
 ### add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
 
+```sqlite
+insert into Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+values ("The Shire", "Bilbo Baggings", "1 Hobbit-Hole", "Bag End", "111", "Middle Earth");
+```
+
 ### update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
+
+```sqlite
+update customers
+set postalcode = "11122"
+where customerID = 92;
+
+```
 
 ### list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
 
