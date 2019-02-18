@@ -123,6 +123,7 @@ sqlite3 budget.sqlite3
 ```
 
 ## Create Table
+```
 Create Table budget.accounts (
 
    Id int Primary Key Not Null,
@@ -131,4 +132,4 @@ Create Table budget.accounts (
    
    budget Real Not Null
    
-);
+);```
