@@ -93,7 +93,14 @@ group by c.City
 order by City;
 ```
 ### delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.
-
+```sqlite
+delete from Customers
+where CustomerID not in
+      (select c.CustomerID from Orders as o
+        join Customers C on o.CustomerID = C.CustomerID
+        group by c.CustomerID
+        );
+```
 ## Create Database and Table
 
 ### Keep track of the code you write and paste at the end of this document
