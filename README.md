@@ -117,3 +117,18 @@ where CustomerID not in
   - account `name` should be unique.
   - account `budget` is required.
 
+## Create Database
+```sqlite
+sqlite3 budget.sqlite3
+```
+
+## Create Table
+Create Table budget.accounts (
+
+   Id int Primary Key Not Null,
+   
+   Name  Text Not Null Unique,
+   
+   budget Real Not Null
+   
+);
